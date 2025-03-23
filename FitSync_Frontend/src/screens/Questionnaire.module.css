@@ -5,6 +5,9 @@
     background: linear-gradient(to bottom right, #fde2e4, #fad2e1);
     padding: 20px;
     font-family: "Georgia", serif;
+    /* justify-content: center; */
+    /* display: flex; */
+    /* margin: 0 auto;  */
   }
   
   /* 🔝 Navbar */
@@ -34,7 +37,7 @@
   }
   
   /* 🏋️‍♂️ Workout Header */
-  .workoutTitle {
+  .Title {
     font-size: 2.2rem;
     font-weight: bold;
     margin-top: 10px;
@@ -50,91 +53,100 @@
     color: #5a2b2b;
     margin-bottom: 25px;
   }
-  
-  /* 🏋️‍♀️ Workout Grid */
-  .workoutGrid {
+
+
+  /* Questionnaire  */
+  .questionContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     gap: 20px;
     max-width: 1000px;
     margin: auto;
+    justify-content: center; 
   }
   
-  .workoutCard {
-    background: rgba(255, 228, 232, 0.95);
+  .questionCard {
+    /* background: rgba(255, 228, 232, 0.95);
     border-radius: 15px;
     padding: 20px;
     box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.1);
     text-align: left;
     border: 1.5px solid rgba(255, 182, 193, 0.6);
+    transition: transform 0.2s; */
+
+
+    width: 500px;
+    /* min-height: 100%; */
+    background: #ffffff;
+    /* border-radius: 4px; */
+    /* margin-top: 100px; */
+    padding: 30px 60px;
+    /* padding: 20px; */
+    /* box-sizing: border-box; */
+
+    border-radius: 15px;
+    border: 1.5px solid rgba(255, 182, 193, 0.6);
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
+
+
+    ul {
+        margin-top: 20px;
+        margin-left: -40px;
+    
+        li {
+            text-decoration: none;
+            list-style: none;
+            color: #2d264b;
+            font-size: 16px;
+            background: #ffffff;
+            border: 1px solid #9c9c9c;
+            border-radius: 16px;
+            padding: 11px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    
+        .select-answer {
+            background: #150080;
+            border: 1px solid #d08642;
+            color: #ffffff
+          }
+        
+      }
   }
   
-  .workoutCard:hover {
+  /* .questionCard:hover {
     transform: scale(1.03);
-  }
+  } */
   
   /* 📝 Card Styling */
-  .workoutCard h3 {
+  .questionCard h3 {
     font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 10px;
     color: #3e2723;
   }
   
-  .workoutCard p {
+  .questionCard p {
     font-size: 1rem;
     margin-bottom: 5px;
     color: #5a3c41;
   }
   
-  .workoutCard ul {
+  /* .questionCard ul {
     padding-left: 15px;
     list-style: none;
   }
   
-  .workoutCard li {
+  .questionCard li {
     font-size: 1rem;
     margin-bottom: 5px;
-  }
+  } */
+
+
+   
+ 
+
   
-  /* 📌 Small Text */
-  .smallText {
-    font-size: 0.85rem;
-    font-style: italic;
-    color: #7a2f51;
-  }
   
-  /* 📱 Responsive */
-  @media (max-width: 900px) {
-    .workoutGrid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  .dayViewContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to bottom, #f8c5d1, #f4a9bd);
-  }
-  
-  .dayViewCard {
-    background-color: #f9d3df;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 400px;
-  }
-  
-  h2 {
-    color: #5c2a3e;
-    font-size: 24px;
-  }
-  
-  p {
-    color: #7a3f55;
-    font-size: 18px;
-  }

@@ -8,9 +8,12 @@ const WorkoutPlan = () => {
       {/* Navbar */}
       <div className={styles.navbar}>
         <h1 className={styles.logo}>FitSync</h1>
-        <div className={styles.navIcons}>
-          <Sidebar />
-        </div>
+        <div className="d-flex flex-column vh-100" style={{ background: "linear-gradient(to right, #E0BBE4, #FFDFD3, #FFD3B6)" }}>
+      {/* Top Navigation */}
+      <div className="d-flex justify-content-between align-items-center p-3">
+        <Sidebar />
+      </div>
+      </div>
       </div>
 
       {/* Workout Header */}

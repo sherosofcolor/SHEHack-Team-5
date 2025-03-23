@@ -6,7 +6,7 @@ import Sidebar from "../components/Sidebar";
 const CustomCalendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const currentMonth = currentDate.getMonth() + 1; // Get month as a 1-based value
-  
+
   const navigate = useNavigate();
 
   const periodDays = [23, 26, 27, 28];
@@ -52,8 +52,12 @@ const CustomCalendar = () => {
   }
 
   return (
+      <div className="d-flex flex-column vh-100" style={{ background: "linear-gradient(to right, #E0BBE4, #FFDFD3, #FFD3B6)" }}>
+      {/* Top Navigation */}
+      <div className="d-flex justify-content-between align-items-center p-3">
+        <Sidebar />
+        </div>
     <div className={styles.calendarContainer}>
-      <Sidebar />
       <h2 className={styles.calendarTitle}>When was your last period?</h2>
       <div className={styles.calendarWrapper}>
         <div className={styles.calendarHeader}>
@@ -70,6 +74,7 @@ const CustomCalendar = () => {
         </div>
         <div className={styles.daysGrid}>{days}</div>
       </div>
+    </div>
     </div>
   );
 };

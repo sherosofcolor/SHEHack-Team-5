@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,18 +9,36 @@ const HomePage = () => {
   const today = new Date();
   const month = today.getMonth() + 1; // Convert 0-based month to 1-based
   const day = today.getDate();
+  const monthNumber = today.getMonth(); 
+
+  const [dayOfWeek, setDayOfWeek] = useState('');
+  const [date, setDate] = useState('');
+
+  // Array to map month numbers to month names
+  const monthNames = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+  ];
+
+  useEffect(() => {
+    const today = new Date();
+    const options = { weekday: 'long', month: 'long', day: 'numeric' };
+    setDayOfWeek(today.toLocaleDateString('en-US', { weekday: 'long' })); // e.g., "Monday"
+    setDate(today.toLocaleDateString('en-US', options)); // e.g., "March 23, 2025"
+  }, []);
 
   return (
     <div className="d-flex flex-column vh-100" style={{ background: "linear-gradient(to right, #E0BBE4, #FFDFD3, #FFD3B6)" }}>
       {/* Top Navigation */}
       <div className="d-flex justify-content-between align-items-center p-3">
         <div className="fw-bold display-5 text-dark ms-4">
-          <p>Wednesday,</p>
-          <p>June 20th</p>
+        <p>{dayOfWeek}, {monthNames[monthNumber]} {day}</p>
         </div>
-        <Sidebar />
       </div>
-
+      {/* Top Navigation */}
+      <div className="d-flex justify-content-between align-items-center p-3">
+        <Sidebar />
+        </div>
       {/* Main Content */}
       <div className="d-flex flex-grow-1 align-items-center justify-content-between p-4">
         {/* Function Buttons */}

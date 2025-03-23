@@ -25,9 +25,10 @@ const DayView = () => {
 
   return (
     <div className={styles.container}>
-      {/* Navbar */}
-      <Sidebar />
-
+{/* Top Navigation */}
+<div className="d-flex justify-content-between align-items-center p-3">
+        <Sidebar />
+        </div>
       {/* Workout Header */}
       <h2 className={styles.workoutTitle}>
         <span>{fullDate}</span> Workout
