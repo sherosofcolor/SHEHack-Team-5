@@ -84,3 +84,6 @@ AI Tool Disclosure:
 Presentation Link:
 
     https://www.canva.com/design/DAGijv_Q72M/nXXZ8qHIGzCpDCfbUEt99g/edit?utm_content=DAGijv_Q72M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+Mobile application prototype link:
+    https://www.figma.com/proto/5WlBSEwQ9MsX1wAykTIEz9/Untitled?node-id=0-1&t=tv4lLtJHOd2ruCVd-1
