@@ -1,0 +1,117 @@
+/* 🌸 Background & Layout */
+.calendarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #e8a7c2, #fbe5e7);
+    padding: 20px;
+  }
+  
+  /* 🏷️ Title */
+  .calendarTitle {
+    font-size: 2rem;
+    color: #1e3a22;
+    margin-bottom: 15px;
+    font-family: "Georgia", serif;
+  }
+  
+  /* 📅 Calendar Wrapper */
+  .calendarWrapper {
+    background: #f8c8dc;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  /* 🔼 Navigation */
+  .calendarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #3e2c41;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .navButton {
+    background: none;
+    border: none;
+    color: #3e2c41;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .navButton:hover {
+    color: #bf5278;
+  }
+  
+  /* 📅 Weekday Headers */
+  .weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    color: #7a2f51;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  .weekday {
+    padding: 5px 0;
+  }
+  
+  /* 🏷️ Days Grid */
+  .daysGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+  }
+  
+  /* 📆 Individual Day Cell */
+  .calendarCell {
+    background: #fcdde8;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px 0;
+    position: relative;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    height: 50px;
+  }
+  
+  .emptyCell {
+    height: 50px;
+  }
+  
+  /* 🔴 Period Days */
+  .periodDot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 4px auto;
+  }
+  
+  /* ⚪ Ovulation Days */
+  .ovulationDot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 4px auto;
+  }
+  
+  /* 🌟 Hover Effects */
+  .calendarCell:hover {
+    background: #f3a6c0;
+    color: white;
+    transform: scale(1.05);
+  }
+  
